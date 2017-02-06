@@ -20,6 +20,7 @@ public class DeptLogInterceptor implements Interceptor{
 		User user = inv.getController().getSessionAttr(Constant.CurrentUser);
 		if (user==null) {
 			inv.getController().redirect("/");
+			
 		}else{
 			LogService logService = new LogServiceImpl();
 			Log log = new Log();
