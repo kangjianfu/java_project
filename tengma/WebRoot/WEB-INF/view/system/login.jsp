@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="renderer" content="webkit">
-    <title>jfinal_easyui权限管理系统</title>
-    <meta name="description" content="jfinal_easyui权限管理系统" />
-	<meta name="keywords" content="jfinal_easyui权限管理系统" />
+    <title>内蒙古腾马文化运营支撑系统</title>
+    <meta name="description" content="腾马文化" />
+	<meta name="keywords" content="腾马文化" />
     <link rel="stylesheet" href="<%=path %>/css/pintuer.css">
     <link rel="stylesheet" href="<%=path %>/css/admin.css">
     <script src="<%=path %>/js/jquery.js"></script>
@@ -19,13 +19,14 @@
     <link type="image/x-icon" href="<%=path %>/favicon.ico" rel="shortcut icon" />
     <link href="<%=path %>/favicon.ico" rel="bookmark icon" />
 </head>
+
 <body>
 <div class="container">
     <div class="line">
         <div class="xs6 xm4 xs3-move xm4-move">
             <br /><br />
             <div class="media media-y">
-                <a href="#" target="_blank"><h1>jfinal_easyui权限管理系统</h1></a>
+                <a href="#" target="_blank"><h1>内蒙古腾马文化运营支撑系统</h1></a>
             </div>
             <br /><br />
             <form name="login" action="<%=path %>/checklogin" method="post">

@@ -10,7 +10,7 @@
     <!-- 头部 -->
    <div class="wu-header" data-options="region:'north',border:false,split:true">
    	   	<div class="wu-header-left">
-       		<h1>jfinal_easyui权限管理系统</h1>
+       		<h1>内蒙古腾马文化运营支撑系统</h1>
        	</div>
       	<div class="wu-header-right">
        		<p><strong class="easyui-tooltip">${CurrentUser.nickname}</strong>，欢迎您！</p>
@@ -38,9 +38,8 @@
         <div id="wu-tabs" class="easyui-tabs" data-options="border:false,fit:true">  
             <div title="首页" style="margin-left:10px;">
 				<div class="cs-首页-remark">
-					<h1>欢迎使用jfinal_easyui权限管理系统</h1> <br>
-					制作：梦想天堂软件工作室<br>
-					我的主页：<a href="http://www.mxtt.cc" target="_blank">http://www.mxtt.cc</a><br>
+					<h1>欢迎使用 内蒙古腾马文化运营支撑系统</h1> <br>
+					<br>
 					说明：日积月累，每天进步一点点！
 				</div>
 			</div>
@@ -49,7 +48,7 @@
 	<!--中部  结束-->
 	<!--尾部-->
 	<div class="wu-footer" data-options="region:'south',border:true,split:true">
-    	&copy; http://89.48.16.1 六盘水市国家税务局  All Rights Reserved
+    	&copy; 亚洲掘金  All Rights Reserved
     </div>
 	<!--尾部  结束-->
 	<!--右键菜单  -->
