@@ -26,7 +26,8 @@ public class IndexController extends Controller{
 	 * 系统登陆首页 system/login
 	 *
 	*/
-	@Clear
+	
+	@Clear //clear 不对这个方法进行拦截
 	public void index() {
 		redirect("/login");
 	}

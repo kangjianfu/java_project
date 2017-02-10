@@ -6,6 +6,7 @@ data-options="
     fit:true,
     fitColumns:true,
     rownumbers:true,
+    nowrap:false,
     singleSelect:true,
     remoteSort:false, //本地排序
     sortName:'username', //默认排序的字段
@@ -14,15 +15,14 @@ data-options="
 ">    
     <thead>   
         <tr>   
-            <th data-options="field:'username',title:'登陆账号',width:40,sortable:true"></th>   
-            <th data-options="field:'nickname',title:'用户名称',width:40,sortable:true"></th>   
-            <th data-options="field:'ip_address',title:'IP地址',width:40,sortable:true"></th>   
-            <th data-options="field:'request_name',title:'操作模块',width:40,sortable:true"></th>   
-            <th data-options="field:'request_url',title:'请求地址',width:60,sortable:true"></th>   
-            <th data-options="field:'url_para',title:'url参数',width:40,sortable:true"></th>   
-            <th data-options="field:'old_values',title:'原值',width:100,sortable:true"></th>   
-            <th data-options="field:'new_values',title:'新值',width:100,sortable:true"></th>   
-            <th data-options="field:'operation_time',title:'操作时间',width:60,sortable:true"></th>   
+            <th data-options="field:'username',title:'登陆账号',width:20"></th>   
+            <th data-options="field:'nickname',title:'用户名称',width:20"></th>   
+            <th data-options="field:'ip_address',title:'IP地址',width:20"></th>   
+            <th data-options="field:'request_name',title:'操作模块',width:20"></th>   
+            <th data-options="field:'request_url',title:'请求地址',width:40"></th>   
+            <th data-options="field:'url_para',title:'url参数',width:20"></th>   
+            <th data-options="field:'new_values',title:'新值',width:80"></th>   
+            <th data-options="field:'operation_time',title:'操作时间',width:40,sortable:true"></th>   
         </tr>   
     </thead>  
 </table> 

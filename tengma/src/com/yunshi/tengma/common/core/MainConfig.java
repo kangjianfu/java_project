@@ -13,8 +13,10 @@ import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 import com.yunshi.tengma.common.interceptor.LoginInterceptor;
 import com.yunshi.tengma.common.model._MappingKit;
+import com.yunshi.tengma.common.route.CustomerRoutes;
 import com.yunshi.tengma.common.route.SystemRoutes;
 import com.yunshi.tengma.common.route.ZsRoutes;
+import com.yunshi.tengma.customer.model.Customer;
 import com.yunshi.tengma.plugin.DemoPlugin;
 import com.yunshi.tengma.system.model.Dept;
 import com.yunshi.tengma.system.model.Log;
@@ -54,6 +56,7 @@ public class MainConfig extends JFinalConfig {
 	public void configRoute(Routes me) {
 		me.add(new SystemRoutes());	//系统管理
 		me.add(new ZsRoutes());//知识分享
+		me.add(new CustomerRoutes());//客户管理
 
 	}
 
@@ -65,9 +68,11 @@ public class MainConfig extends JFinalConfig {
 		DruidPlugin druid = new DruidPlugin(PropKit.get("jdbcUrl"), PropKit.get("user").trim(), PropKit.get("password").trim());
 		//druid.set(10, 10, 20);
 		druid.addFilter(new StatFilter());
+		
 		me.add(druid);
 		// 配置ActiveRecord插件
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(druid);
+		arp.setShowSql(PropKit.getBoolean("devMode", false));
 		me.add(arp);
 		arp.addMapping("sys_user","id", User.class);	// 映射sys_user 表到 User模型
 		arp.addMapping("sys_role","id", Role.class);	// 映射sys_role 表到 Role模型
@@ -76,9 +81,9 @@ public class MainConfig extends JFinalConfig {
 		arp.addMapping("sys_user_role","id", UserRole.class);	// 映射sys_user_role 表到 UserRole模型
 		arp.addMapping("sys_role_menu","id", RoleMenu.class);	// 映射sys_role_menu 表到 RoleMenu模型
 		arp.addMapping("sys_log", "id",Log.class); //日志
+		arp.addMapping("t_customer", "id", Customer.class);//映射客户表
 		// 权限系统相关表以外的所有配置在_MappingKit中通过_JFinalGenerator自动生成
 		_MappingKit.mapping(arp);
-		
 		me.add(new DemoPlugin());
 		
 		
@@ -96,6 +101,7 @@ public class MainConfig extends JFinalConfig {
 		//伪静态的 默认为后缀是.html
 		//me.add(new FakeStaticHandler());
 		//me.add(new FakeStaticHandler(".abc"));
+		//me.add(new )
 	}
 
 }

@@ -67,7 +67,8 @@ public class LogServiceImpl implements LogService {
 		if ("/system/dept/delete".equals(requestUrl)){
 			return "部门删除";
 		}
-		return "中文名称未定义,请在LogServiceImpl中定义";
+		//return "中文名称未定义,请在LogServiceImpl中定义";
+		return requestUrl;
 	}
 
 

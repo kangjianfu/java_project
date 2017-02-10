@@ -6,6 +6,7 @@ data-options="
     fitColumns:true,
     singleSelect:true,
     rownumbers:true,
+    pageSize:20,
     onClickRow: function(index,row){
 		$('#dg-system-xxsjzd-zdxl-list').datagrid({
 			url:'system/xxsjzd/listZdxl/'+row.id
